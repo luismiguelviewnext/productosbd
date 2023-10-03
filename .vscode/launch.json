@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ProductosbdApplication<productosbd>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.curso.productosbd.ProductosbdApplication",
+            "projectName": "productosbd",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
