@@ -7,7 +7,6 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.curso.model.Producto;
@@ -41,8 +40,8 @@ public class ProductoController {
      * @param stock la nueva cantidad de stock para el producto.
      */
     @PutMapping(value="producto/{id}/{stock}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public void actualizarStock(@RequestBody int id, @RequestBody int stock) {
-        productoService.actualizarStock(stock, id);
+    public void actualizarStock(@PathVariable("id") int id, @PathVariable("stock") int stock) {
+        productoService.actualizarStock(id, stock);
     }
 
     /**

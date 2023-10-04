@@ -10,7 +10,7 @@ public interface ProductoService {
     List<Producto> listarProductos();
 
     // Actualizar el stock de un producto partiendo de su id
-    void actualizarStock(int stock, int id);
+    void actualizarStock(int id, int stock);
 
     //Obtener el precio de un producto
     List<Producto> obtenerPrecio(int id);

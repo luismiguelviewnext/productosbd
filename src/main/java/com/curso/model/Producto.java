@@ -17,7 +17,6 @@ import jakarta.persistence.Table;
 @Table(name ="productos")
 public class Producto {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private int codigoProducto;
     private String nombreProducto;
     private double precioUnitario;

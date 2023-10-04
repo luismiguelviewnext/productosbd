@@ -40,7 +40,7 @@ public class ProductoServiceImpl implements ProductoService {
      * @param id    Identificador del producto.
      */
     @Override
-    public void actualizarStock(int stock, int id) {
+    public void actualizarStock(int id, int stock) {
         Producto producto = productosDao.findById(id).orElse(null);
         if (producto != null && producto.getStock()> stock) {
             producto.setStock(producto.getStock()-stock);
