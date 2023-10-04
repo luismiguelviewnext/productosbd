@@ -42,8 +42,8 @@ public class ProductoServiceImpl implements ProductoService {
     @Override
     public void actualizarStock(int stock, int id) {
         Producto producto = productosDao.findById(id).orElse(null);
-        if (producto != null) {
-            producto.setStock(stock);
+        if (producto != null && producto.getStock()> stock) {
+            producto.setStock(producto.getStock()-stock);
             productosDao.save(producto);
         }
     }
